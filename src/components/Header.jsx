@@ -24,14 +24,24 @@ const Header = () => {
           </div>
           <span className="text-2xl font-bold px-2">Crystal Gadgets</span>
         </Link>
-        <ul className="lg:flex hidden lg:space-x-12  font-semibold">
+        <ul className="lg:flex hidden lg:space-x-10  font-semibold">
           <li>
-            <NavLink to="/" aria-label="home" title="home">
+            <NavLink
+              to="/"
+              aria-label="home"
+              className={`default-style ${({ isActive }) =>
+                isActive ? "active" : "default"}`}
+            >
               HOME
             </NavLink>
           </li>
           <li>
-            <NavLink to="/shop" aria-label="shop" title="shop">
+            <NavLink
+              to="/shop"
+              aria-label="shop"
+              className={`default-style ${({ isActive }) =>
+                isActive ? "active" : "default"}`}
+            >
               SHOP
             </NavLink>
           </li>
@@ -39,7 +49,7 @@ const Header = () => {
             <NavLink to="/cart" aria-label="cart" title="cart">
               <div className="relative">
                 <FontAwesomeIcon
-                  className="text-sky-400 text-2xl"
+                  className="text-sky-400 text-2xl transition duration-300 hover:text-sky-500 "
                   icon={faShoppingCart}
                 ></FontAwesomeIcon>
                 <p className="text-sm bg-sky-600 text-white text-center px-2 rounded-full absolute -top-3 right-3 lg:-top-3 lg:-right-4">
@@ -49,7 +59,12 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" aria-label="about" title="about">
+            <NavLink
+              to="/about"
+              aria-label="about"
+              className={`default-style ${({ isActive }) =>
+                isActive ? "active" : "default"}`}
+            >
               ABOUT
             </NavLink>
           </li>

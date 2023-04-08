@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  @apply border-b-[1.5px]
+   border-sky-300;
+}
+
+.cart-active {
+  @apply text-sky-500;
+}
+
+.default-style {
+  @apply px-2 py-1 transition duration-300 hover:text-sky-500;
+}
